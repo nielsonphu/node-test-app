@@ -8,6 +8,7 @@ var jobs = [
 	{ title: 'Programmer', description: 'You will be making codes.' },
 	{ title: 'Axe maker', description: 'You will be making axes.' }
 ];
+
 var findJobs = function(query) {
 	return Promise.cast(Job.find(query).exec());
 }
@@ -27,3 +28,5 @@ exports.seedJobs = function() {
 		}
 	});
 }
+
+exports.saveJob = createJob;
